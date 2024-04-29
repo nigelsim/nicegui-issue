@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "example"
+version = "0.1.0.dev0"
+description = "Example NiceGUI issue"
+authors = ["Nigel Sim <nigel.sim@gmail.com>"]
+readme = "README.md"
+packages = [{include = "example"}]
+
+[tool.poetry.scripts]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+pyright = "^1.1.337"
+pytest = "^7.4.3"
+black = "^23.11.0"
+isort = "^5.12.0"
+poetry = "^1.7.1"
+
+[tool.poetry.group.ui.dependencies]
+nicegui = "^1.4.23"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 88
